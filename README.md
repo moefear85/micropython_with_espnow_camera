@@ -11,4 +11,6 @@ The UART REPL speed has been bumped to 1152000.
 - currently, my compiled firmware sporadically GuruMeditates after a while, even if not using camera or espnow or ever having called init(). I'm not sure if it has anything to do with wifi. I'm currently learning to pull and decode a crashdump from flash to determine what's going on. If you can help, let me know.
 
 # Future Plans
+- make espnow more configurable
+- make camera config/init options clearer using constants
 - integrate mcpwm as well as various other sensor/actuator (display) drivers & libraries for them, such as lvgl, tft_espi, etc.
