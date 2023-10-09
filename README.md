@@ -5,7 +5,7 @@ This project is a quick hack to mainly satisfy my own needs. It is a build of mi
 The UART REPL speed has been bumped to 1152000.
 
 # Known Issues
-- once the camera has been initialized, it begins to corrupt the outgoing uart repl stream. this is a carry-over from the original project. I don't know the cause. Input is not affected however.
+- once the camera has been initialized, it begins to corrupt the outgoing uart repl stream. this is a carry-over from the original project and independent of configured baudrate. I don't know the cause. Input is not affected however.
 - gpio_install_isr_service(), called by camera.init(), sporadically displays an error about already being installed. This is caused by the esp32-camera driver mixed with micropython. It seems harmless.
 - soft reset without first calling espnow.deinit() will GuruMeditate at the next incoming packet.
 - currently, my compiled firmware sporadically GuruMeditates after a while, even if not using camera or espnow or ever having called init(). I'm not sure if it has anything to do with wifi. I'm currently learning to pull and decode a crashdump from flash to determine what's going on. If you can help, let me know.
