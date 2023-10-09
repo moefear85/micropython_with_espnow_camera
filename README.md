@@ -1,6 +1,6 @@
 # micropython_with_espnow_camera
 
-This project is a quick hack to mainly satisfy my own needs. It is a build of micropython 1.20 firmware for the esp32 with or without psram, and includes the esp32-camera module, and espnow. It autodetects psram but works without it. The camera works without psram by default, so'll need to configure that. The camera module uses lemariva's codebase, so look there on how to do so. For espnow, import espnow and run espnow.help(). If you need other esp32 chips or the source, let me know. I'll expand the project with source & improve the espnow functionality when and if I have time.
+This project is a quick hack and WIP. It is a build of micropython 1.20 firmware for the esp32 with or without psram, and includes the esp32-camera module, and espnow. It autodetects psram but works without it. The camera works without psram by default, so'll need to configure that. The camera module uses lemariva's codebase, so look there on how to do so. For espnow, import espnow and run espnow.help(). If you need other esp32 chips or the source, let me know. I'll expand the project with source & improve the espnow functionality.
 
 The UART REPL speed has been bumped to 1152000.
 
