@@ -12,5 +12,6 @@ The UART REPL speed has been bumped to 1152000.
 
 # Future Plans
 - make espnow more configurable
+- expose sniffer api to micropython
 - make camera config/init options clearer using constants
 - integrate mcpwm as well as various other sensor/actuator (display) drivers & libraries for them, such as lvgl, tft_espi (my traditional choice for ILI9341 parallel LCD interface), etc.
