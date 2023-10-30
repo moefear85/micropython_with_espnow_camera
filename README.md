@@ -1,6 +1,11 @@
+# Update Notice
+* I've been busy this 3 weeks fighting the micropython build process, checking off one error after another. Hopefully soon I'll be able to upload updates with more features. Just a hint, if you want asynchronous espnow, it's already available in mainline micropython, see glenn20's great work. I just happen to be used to using the traditional esp-idf way of callbacks, so that motivated me to write my own module. I'm currently implementing the mcpwm. It used to be in mainline for a short while, dunno why it got removed (at least I can't find it). I also have updated versions of micropython workflow tools that I'll update later, since I still have more feature additions to complete there that streamline the process of (wirelessly/remotely) flashing the board and controlling the filesystem and reading out logs. LvGL is also making strides.
+
 # micropython_with_espnow_camera
 
 This project is a quick hack and WIP. It is a build of micropython 1.20 firmware for the esp32 with or without psram, and includes the esp32-camera module, and espnow. It autodetects psram but works without it. The camera works without psram by default, so you'll need to configure that. The camera module uses lemariva's codebase, so look there on how to do so. For espnow, import espnow and run espnow.help(). If you need other esp32 chips or the source, let me know. I'll expand the project with source & improve the espnow functionality.
+
+The motivation behind this is the fact that many useful features/modules that one might want, are compiled by various people separately, so you always have to choose one image/feature or the other. My goal is to integrate them into an AIO image, with GUI, MCPWM, ESPNOW, SNIFFER/PACKET-FREEDOM, other ESP Peripherals not yet in MPY, and Logging (although I recently found out its already in the micropython-libs).
 
 The UART REPL speed has been bumped to 1152000.
 
