@@ -1,7 +1,7 @@
 # Update Notice
 * Added new Firmware release. See the Changelog file.
 
-# micropython_with_espnow_camera
+# micropython_with_espnow_camera_mcpwm_sniffer_lvgl
 
 This project is a quick hack and WIP. It is a build of micropython 1.20 firmware for the esp32 with or without psram, and includes the esp32-camera module, and espnow. It autodetects psram but works without it. The camera works without psram by default, so you'll need to configure that. The camera module uses lemariva's codebase, so look there on how to do so. For espnow, import espnow and run espnow.help(). If you need other esp32 chips or the source, let me know. I'll expand the project with source & improve the espnow functionality.
 
