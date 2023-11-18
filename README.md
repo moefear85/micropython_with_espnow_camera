@@ -1,5 +1,5 @@
 # Update Notice
-* I've been busy this 3 weeks fighting the micropython build process, checking off one error after another. Hopefully soon I'll be able to upload updates with more features. Just a hint, if you want asynchronous espnow, it's already available in mainline micropython, see glenn20's great work. I just happen to be used to using the traditional esp-idf way of callbacks, so that motivated me to write my own module. I'm currently implementing the mcpwm. It used to be in mainline for a short while, dunno why it got removed (at least I can't find it). I also have updated versions of micropython workflow tools that I'll update later, since I still have more feature additions to complete there that streamline the process of (wirelessly/remotely) flashing the board and controlling the filesystem and reading out logs. LvGL is also making strides.
+* Added new Firmware release. See the Changelog file.
 
 # micropython_with_espnow_camera
 
@@ -17,6 +17,9 @@ You can block or do lengthy operations in the espnow receive callback for as lon
 - gpio_install_isr_service(), called by camera.init(), sporadically displays an error about already being installed. This is caused by the esp32-camera driver mixed with micropython. It seems harmless.
 - soft reset without first calling espnow.deinit() will GuruMeditate at the next incoming packet.
 - currently, my compiled firmware sporadically GuruMeditates after a while, even if not using camera or espnow or ever having called init(). I'm not sure if it has anything to do with wifi. I'm currently learning to pull and decode a crashdump from flash to determine what's going on. If you can help, let me know.
+
+# LVGL
+  To test LVGL, copy the *lvgl_test.py* file to your board after flashing the lvgl firmware. You should see a Hello World Button, and an FPS counter.
 
 # Future Plans
 - make espnow more configurable
