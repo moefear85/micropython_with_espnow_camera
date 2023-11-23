@@ -9,6 +9,12 @@ The motivation behind this is the fact that many useful features/modules that on
 
 * The UART REPL speed has been bumped to 1152000. Some log messages are printed in 115200 at boot, specifically harmless errors about psram & presumably tinyusb.
 * Read the md files for each individual module
+* There's no point in building SPIRAM variants, because all targets are compiled with optional SPIRAM, and then it doesn't matter whether you specifically pass BOARD_VARIANT=SPIRAM (which can only be passed to esp32 anyways). They will all use SPIRAM if available. you can test this using the following:
+* ```
+  import esp32
+  esp32.idf_heap_info(esp32.HEAP_DATA)
+  ```
+  This will print a set of 4-tuples, each tuple represents a different type/area of memory (the 2nd represents SPIRAM if available), and within each tuple, the 1st element represents the total size of that area, the 2nd represents the total free size of that area. Hence if you see anything larger than 1MB there, you know mpy is using SPIRAM.
 
 # Known Issues
 * if you set *hybrid=False* when creating the ili9341 Display, it sporadically meditates. *hybrid=True* is not only faster, it's also more reliable. See the test file if you don't know what I'm talking about.
