@@ -1,5 +1,5 @@
 ### Update Notice
-* esp32s2 now works with lvgl, with or without spiram. see changelog/releases. I can't test the esp32s3 at the moment, as I don't have any broken out modules. But the image is ready, if someone wants to test it.
+* esp32s2 now works with lvgl, with or without spiram. see changelog/releases. I can't test the esp32s3/c3 at the moment, as I don't have any broken out modules. But the images are ready, if someone wants to test them.
 
 # micropython_with_espnow_camera_mcpwm_sniffer_lvgl
 
