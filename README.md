@@ -1,5 +1,5 @@
-# Update Notice
-* Added new Firmware release. See the Changelog file.
+### Update Notice
+* esp32s2 now works with lvgl, with or without spiram. see changelog/releases
 
 # micropython_with_espnow_camera_mcpwm_sniffer_lvgl
 
