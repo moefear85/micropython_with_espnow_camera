@@ -7,7 +7,8 @@ This project is a quick hack and WIP. It is a build of micropython 1.22 firmware
 
 The motivation behind this is the fact that many useful features/modules that one might want, are compiled by various people separately, so you always have to choose one image/feature or the other. My goal is to integrate them into an AIO image, with GUI, MCPWM, ESPNOW, SNIFFER/PACKET-FREEDOM, other ESP Peripherals not yet in MPY, and Logging (although I recently found out its already in the micropython-libs).
 
-The UART REPL speed has been bumped to 1152000.
+* The UART REPL speed has been bumped to 1152000.
+* Read the md files for each individual module
 
 # Known Issues
 * if you set *hybrid=False* when creating the ili9341 Display, it sporadically meditates. *hybrid=True* is not only faster, it's also more reliable. See the test file if you don't know what I'm talking about.
