@@ -10,7 +10,7 @@ The motivation behind this is the fact that many useful features/modules that on
 * The UART REPL speed has been bumped to 1152000. Some log messages are printed in 115200 at boot, specifically harmless errors about psram & presumably tinyusb.
 * Read the md files for each individual module
 * There's no point in building SPIRAM variants, because all targets are compiled with optional SPIRAM, and then it doesn't matter whether you specifically pass BOARD_VARIANT=SPIRAM (which can only be passed to esp32 anyways). They will all use SPIRAM if available. you can test this using the following:
-* ```
+  ```
   import esp32
   esp32.idf_heap_info(esp32.HEAP_DATA)
   ```
