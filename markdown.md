@@ -1,4 +1,4 @@
-```dot
+```mermaid
 digraph G {
 A -> B
 B -> C
